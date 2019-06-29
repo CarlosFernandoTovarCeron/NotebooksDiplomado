@@ -225,6 +225,11 @@ confusionMatrix(factor.prueba,prediccion.svm)</code></pre>
 ##                                           
 ##        'Positive' Class : 0               
 ## </code></pre>
+<pre class="r"><code>dato.test&lt;-data.frame( Precio=as.integer(180000), Llueve=as.integer(1), Bandainternacional=as.integer(1) )
+predict(mejor.modelo,newdata = dato.test)</code></pre>
+<pre><code>## 1 
+## 0 
+## Levels: 0 1</code></pre>
 <pre class="r"><code>prediccion.ctree&lt;-predict(modelo.ctree,conjunto.prueba)
 factor.prueba&lt;-conjunto.prueba[, &quot;ganancia&quot;]
 confusionMatrix(factor.prueba,prediccion.ctree)</code></pre>
